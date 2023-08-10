@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="/css/register.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(45deg, #a5f8f6, #ffffff, #a5f8f6);
+        }
+
+        #fname, #email, #password{
+            width: 30rem;
+            height: 60px;
+            padding: .5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .register-title{
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+        .register-btn{
+            width: 10rem;
+            height: 50px;
+            background-color: #000;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+        .register-btn:hover{
+            background-color: #fff;
+            border: 1px solid #000;
+            color: #000;
+            transition: .3s ease;
+        }
+        .button-container{
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .link-to-login{
+            text-align: center;
+        }
+        .link-to-login span{
+            color: rgb(108, 108, 108);
+            font-size: 13px;
+        }
+        .link-to-login a{
+            color: #000;
+            font-size: 13px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="register-container">
+            <h1 class="register-title">Register</h1>
+            <form action="/register" method="post">
+                <input type="text" name="fname" id="fname" placeholder="Enter your full name" required><br>
+                <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+                <input type="password" name="password" id="password" placeholder="Password" required><br>
+                <div class="button-container">
+                    <button class="register-btn">Sign up</button>
+                </div>
+
+                <div class="link-to-login">
+                    <span>Already have an account?</span>
+                    <a href="/login">Login here</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

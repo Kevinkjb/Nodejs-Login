@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(45deg, #a5f8f6, #ffffff, #a5f8f6);
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem .5rem;
+        }
+        .navbar-list{
+            display: flex;
+            align-items: center;
+        }
+        .navbar-list li{
+            list-style: none;
+            margin: 0 3rem;
+        }
+        .logout-btn{
+            width: 5rem;
+            height: 40px;
+            border: none;
+            color: #fff;
+            background-color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout-btn:hover{
+            color: #000;
+            border: 1px solid #000;
+            background-color: #fff;
+            transition: .3s ease;
+        }
+
+        .greeting-title{
+            font-size: 2rem;
+            padding-left: 1rem;
+        }
+        .user-name{
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="greeting-name">
+            <h1 class="greeting-title">Hi, <span class="user-name"><%= name %></span></h1>
+        </div>
+
+        <div class="home-page">
+            <ul class="navbar-list">
+                <li>Home</li>
+                <li>About</li>
+                <li>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button type="submit" class="logout-btn">Log Out</button>
+                    </form>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container">
+
+       
+
+  
+
+    </div>
+
+</body>
+</html>
